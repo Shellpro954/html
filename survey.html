@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ireland Survey</title>
+</head>
+<body>
+    <h1>Ireland Survey</h1>
+    <form id = "UserSubmission1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" >
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" >
+
+        <label for="country">Country you live in:</label>
+        <input type="text" id="country" name="country" >
+
+        <label for="fav_country">Favourite country visited:</label>
+        <input type="text" id="fav_country" name="fav_country" >
+
+        <label>Choose an option, Do you like ireland?:</label>
+        <input type="radio" id="option1" name="choice" value = "Yes" checked>
+        <label for="option1">Yes!</label>
+        <input type="radio" id="option2" name="choice" value = "no" >
+        <label for="option2">No!</label>
+
+        <label>
+            <input type="checkbox" name="newsletter"> Subscribe to weekly newsletter
+        </label>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+    let formID = document.getElementById("UserSubmission1")
+    formID.addEventListener('submit', userData)
+    function userData(event){
+    event.preventDefault()
+    let name = document.getElementById("name")
+    console.log(name.value)
+    let age = document.getElementById("age")
+    console.log(age.value)
+    let country = document.getElementById("country")
+    console.log(country.value)
+    let fav_country = document.getElementById("fav_country")
+    console.log(fav_country.value)
+    let option1 = document.getElementById("option1")
+    console.log(option1.value)
+    let option2 = document.getElementById("option2")
+    console.log(option2.value)
+        }
+    </script>
+</body>
+</html>
